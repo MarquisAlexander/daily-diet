@@ -1,4 +1,4 @@
-import styled from 'styled-components/native';
+import styled, { css } from 'styled-components/native';
 import { SafeAreaView } from "react-native-safe-area-context";
 
 import AppLogo from "../../assets/Logo.png";
@@ -10,7 +10,12 @@ export const Container = styled(SafeAreaView)`
 export const Header = styled.View`
     flex-direction: row;
     justify-content: space-between;
-    padding-top: 24px
+    padding-top: 24px;
+`;
+
+export const Body = styled.View`
+    padding: 24px 0;
+    flex: 1;
 `;
 
 export const Logo = styled.Image.attrs({
@@ -26,4 +31,33 @@ export const UserImage = styled.Image`
     border-width: 2px;
     border-color: #333638;
     border-radius: 20px;
+`;
+
+export const CardDetails = styled.View`
+    background-color: ${({theme}) => theme.COLORS.GREEN_MID};
+    height: 102px;
+    border-radius: 8px;
+
+    align-items: center;
+    justify-content: center;
+`;
+
+export const Open = styled.Text`
+    position: absolute;
+    top: 8px;
+    right: 8px;
+`;
+
+export const Percent = styled.Text`
+    ${({theme}) => css`
+        font-size: ${theme.FONT_SIZE.G}px;
+        color: ${theme.COLORS.GRAY_100};
+    `}
+`;
+
+export const PercentDescription = styled.Text`
+    ${({theme}) => css`
+        font-size: ${theme.FONT_SIZE.XS}px;
+        color: ${theme.COLORS.GRAY_200};
+    `}
 `;
