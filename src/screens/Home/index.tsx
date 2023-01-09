@@ -1,4 +1,5 @@
 import React from "react";
+import { Button } from "@components/Button";
 
 import {
 	Body,
@@ -9,6 +10,7 @@ import {
 	Open,
 	Percent,
 	PercentDescription,
+	TitleFoods,
 	UserImage,
 } from "./styles";
 
@@ -28,6 +30,8 @@ export function Home() {
 					<PercentDescription>das refeições dentro da dieta</PercentDescription>
 				</CardDetails>
 			</Body>
+			<TitleFoods>Refeições</TitleFoods>
+			<Button title="Nova refeição" />
 		</Container>
 	);
 }

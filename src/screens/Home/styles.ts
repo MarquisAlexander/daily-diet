@@ -5,6 +5,7 @@ import AppLogo from "../../assets/Logo.png";
 
 export const Container = styled(SafeAreaView)`
     padding: 0 24px;
+    flex: 1;
 `;
 
 export const Header = styled.View`
@@ -15,7 +16,6 @@ export const Header = styled.View`
 
 export const Body = styled.View`
     padding: 24px 0;
-    flex: 1;
 `;
 
 export const Logo = styled.Image.attrs({
@@ -59,5 +59,13 @@ export const PercentDescription = styled.Text`
     ${({theme}) => css`
         font-size: ${theme.FONT_SIZE.XS}px;
         color: ${theme.COLORS.GRAY_200};
+    `}
+`;
+
+export const TitleFoods = styled.Text`
+    ${({theme}) => css`
+        color: ${theme.COLORS.GRAY_100};
+        font-size: ${theme.FONT_SIZE.XS}px;
+        padding-bottom: 8px;
     `}
 `;
